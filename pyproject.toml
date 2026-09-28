@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stdlibtrap"
+version = "0.1.0"
+description = "Static checks for three stdlib/asyncio traps mainstream linters miss"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "__AUTHOR__" }]
+keywords = ["lint", "static-analysis", "asyncio", "subprocess", "ast"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.11"]
+
+[project.urls]
+Repository = "https://github.com/__GH_OWNER__/stdlibtrap"
+
+[project.scripts]
+stdlibtrap = "stdlibtrap.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stdlibtrap"]
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
