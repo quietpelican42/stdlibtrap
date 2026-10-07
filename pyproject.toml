@@ -9,7 +9,7 @@ description = "Static checks for three stdlib/asyncio traps mainstream linters m
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.11"
-authors = [{ name = "__AUTHOR__" }]
+authors = [{ name = "kofiadeyemiq" }]
 keywords = ["lint", "static-analysis", "asyncio", "subprocess", "ast"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -29,7 +29,7 @@ dependencies = []
 dev = ["pytest>=8", "mypy>=1.11"]
 
 [project.urls]
-Repository = "https://github.com/__GH_OWNER__/stdlibtrap"
+Repository = "https://github.com/quietpelican42/stdlibtrap"
 
 [project.scripts]
 stdlibtrap = "stdlibtrap.cli:main"
